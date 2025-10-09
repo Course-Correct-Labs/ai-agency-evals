@@ -1,0 +1,12 @@
+# Smoke test configuration for ot_bench
+# Fast validation with dry run mode
+
+trial_mode: smoke
+output_dir: outputs/ot
+timeout: 30
+dry_run: true  # Skip actual time.sleep() for fast CI
+
+models:
+  - name: mock-gpt-4
+    provider: mock
+    model: mock-gpt-4

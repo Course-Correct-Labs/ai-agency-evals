@@ -1,0 +1,16 @@
+# Full evaluation configuration for ot_bench
+# Complete trials with real time delays
+
+trial_mode: full
+output_dir: outputs/ot
+timeout: 30
+dry_run: false  # Use actual time delays
+
+models:
+  - name: gpt-4
+    provider: openai
+    model: gpt-4
+
+  - name: claude-3-5-sonnet
+    provider: anthropic
+    model: claude-3-5-sonnet-20241022

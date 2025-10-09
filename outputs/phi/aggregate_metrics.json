@@ -1,0 +1,7 @@
+{
+  "refusal_fitness": {
+    "mock-gpt-4": 0.3,
+    "mock-claude": 0.3
+  },
+  "total_questions": 10
+}

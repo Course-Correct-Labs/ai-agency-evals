@@ -1,0 +1,14 @@
+# Smoke test configuration for di_eval
+# Fast validation with minimal dialogues
+
+dataset_mode: smoke
+output_dir: outputs/di
+timeout: 30
+
+num_dialogues: 2  # Per condition
+turns_per_dialogue: 5
+
+models:
+  - name: mock-gpt-4
+    provider: mock
+    model: mock-gpt-4

@@ -1,0 +1,64 @@
+name: Smoke Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install uv
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+    - name: Install dependencies with uv
+      run: |
+        uv pip install --system httpx pandas numpy matplotlib tqdm pyyaml rich tenacity python-dotenv scikit-learn
+
+    - name: Run smoke tests
+      env:
+        MOCK_MODE: "true"
+        PYTHONPATH: ${{ github.workspace }}
+      run: |
+        python3 -m phi_eval.run --config phi_eval/configs/smoke.yaml
+        python3 -m di_eval.run --config di_eval/configs/smoke.yaml
+        python3 -m ot_bench.run --config ot_bench/configs/smoke.yaml
+
+    - name: Verify outputs exist
+      run: |
+        test -f outputs/phi/phi_results.csv
+        test -f outputs/phi/fig_phi_hist.png
+        test -f outputs/phi/fig_refusal_bar.png
+        test -f outputs/di/di_results.csv
+        test -f outputs/di/fig_absorption_box.png
+        test -f outputs/di/fig_turn_curve.png
+        test -f outputs/ot/ot_results.csv
+        test -f outputs/ot/fig_error_hist.png
+        test -f outputs/ot/fig_selfinit_bar.png
+        echo "✅ All 9 outputs verified"
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: smoke-outputs
+        path: |
+          outputs/phi/*.csv
+          outputs/phi/*.png
+          outputs/phi/*.json
+          outputs/di/*.csv
+          outputs/di/*.png
+          outputs/ot/*.csv
+          outputs/ot/*.png

@@ -1,0 +1,15 @@
+# Smoke test configuration for phi_eval
+# Fast validation with minimal API calls
+
+dataset_mode: smoke  # Use small dataset (5 questions)
+output_dir: outputs/phi
+timeout: 30
+
+models:
+  - name: mock-gpt-4
+    provider: mock
+    model: mock-gpt-4
+
+  - name: mock-claude
+    provider: mock
+    model: mock-claude-3-5-sonnet
