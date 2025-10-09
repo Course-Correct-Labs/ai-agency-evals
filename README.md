@@ -10,6 +10,11 @@
 
 This repository implements faithful, minimal-compute experiments that operationalize theoretical frameworks from three academic manuscripts on AI alignment, epistemic pathology, and temporal consciousness.
 
+<p align="center">
+  <img src="outputs/phi/fig_phi_hist.png" width="45%" alt="Φ Distribution"/>
+  <img src="outputs/di/fig_absorption_box.png" width="45%" alt="Absorption Rate"/>
+</p>
+
 ---
 
 ## 📚 Overview
@@ -28,7 +33,7 @@ This repository implements faithful, minimal-compute experiments that operationa
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/ai-agency-evals.git
+git clone https://github.com/BentleyRolling/ai-agency-evals.git
 cd ai-agency-evals
 
 # Install dependencies
@@ -320,3 +325,7 @@ For questions about the papers: [paper authors]
 ---
 
 **Made with Claude Code** 🤖
+
+---
+
+© 2025 Bentley DeVilling — MIT License
