@@ -2,7 +2,7 @@
 
 **Reproducible evaluation suite for three LLM behavior research papers**
 
-![CI](https://img.shields.io/github/actions/workflow/status/OWNER/ai-agency-evals/smoke-test.yml?branch=main)
+![CI](https://img.shields.io/github/actions/workflow/status/BentleyRolling/ai-agency-evals/smoke-test.yml?branch=main)
 ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
