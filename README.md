@@ -324,8 +324,4 @@ For questions about the papers: [paper authors]
 
 ---
 
-**Made with Claude Code** 🤖
-
----
-
 © 2025 Bentley DeVilling — MIT License
