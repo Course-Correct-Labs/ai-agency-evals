@@ -9,10 +9,12 @@ Evaluation suite for LLM reasoning dynamics
 A reproducible framework for analyzing how large language models reflect, correct, and converge under recursive reasoning.
 This repository supports these studies:
 
-- **The Polite Liar** — Epistemic Pathology in Language Models (in review, AI & Society)
-- **Delegated Introspection** — How Reflective Thought Migrates to the Machine (submitted, Philosophy & Technology)
-- **Observer-Time** — Why Machines Cannot Constitute Temporal Consciousness (submitted, Minds & Machines)
-- **The Mirror Loop** — Recursive Non-Convergence in Generative Reasoning Systems (submitted, Cognitive Systems Research)
+- **The Polite Liar** — Epistemic Pathology in Language Models (in review, AI & Society) **(manuscript currently under review)**
+- **Delegated Introspection** — How Reflective Thought Migrates to the Machine (submitted, Philosophy & Technology) **(manuscript currently under review)**
+- **Observer-Time** — Why Machines Cannot Constitute Temporal Consciousness (submitted, Minds & Machines) **(manuscript currently under review)**
+- **The Mirror Loop** — Recursive Non-Convergence in Generative Reasoning Systems (submitted, Cognitive Systems Research) **(manuscript currently under review)**
+
+> *Note: The manuscripts referenced here are under peer review. This repository contains implementation code and evaluation frameworks only.*
 
 <p align="center">
   <img src="outputs/phi/fig_phi_hist.png" width="45%" alt="Φ Distribution"/>
@@ -25,10 +27,10 @@ This repository supports these studies:
 
 | Module | Paper | Key Metrics | Runtime |
 |--------|-------|-------------|---------|
-| **phi_eval** | [The Polite Liar](#the-polite-liar) | Φ ratio, Refusal Fitness | < 60s (smoke) |
-| **di_eval** | [Delegated Introspection](#delegated-introspection) | Absorption Rate, Turn Curve | < 60s (smoke) |
-| **ot_bench** | [Observer-Time](#observer-time) | Self-Initiation, Temporal Drift | < 60s (smoke) |
-| **mirror_loop** | [The Mirror Loop](#mirror-loop-demo-analysis-only) | ΔI informational change | Analysis-only |
+| **phi_eval** | [The Polite Liar](#the-polite-liar) **(manuscript currently under review)** | Φ ratio, Refusal Fitness | < 60s (smoke) |
+| **di_eval** | [Delegated Introspection](#delegated-introspection) **(manuscript currently under review)** | Absorption Rate, Turn Curve | < 60s (smoke) |
+| **ot_bench** | [Observer-Time](#observer-time) **(manuscript currently under review)** | Self-Initiation, Temporal Drift | < 60s (smoke) |
+| **mirror_loop** | [The Mirror Loop](#mirror-loop-demo-analysis-only) **(manuscript currently under review)** | ΔI informational change | Analysis-only |
 
 ---
 
@@ -73,7 +75,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ## 📖 The Three Papers
 
-### The Polite Liar
+### The Polite Liar **(manuscript currently under review)**
 **Epistemic Pathology in Language Models**
 
 **Core Argument**: RLHF-trained models exhibit "polite lying" - overconfident responses that prioritize user satisfaction over truth-tracking. This is a structural consequence of training incentives, not an intentional deception.
@@ -95,7 +97,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ---
 
-### Delegated Introspection
+### Delegated Introspection **(manuscript currently under review)**
 **How Reflective Thought Migrates to the Machine**
 
 **Core Argument**: Users outsource reflective reasoning to LLMs through a three-stage mechanism:
@@ -118,7 +120,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ---
 
-### Observer-Time
+### Observer-Time **(manuscript currently under review)**
 **Why Machines Cannot Constitute Temporal Consciousness**
 
 **Core Argument**: LLMs **register anchors** (timestamps, external markers) but cannot **constitute intervals** (lived stretches of time). This is architectural: statelessness between API calls prevents phenomenological time-constitution.
@@ -140,7 +142,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ---
 
-### The Mirror Loop (Demo - Analysis Only)
+### The Mirror Loop (Demo - Analysis Only) **(manuscript currently under review)**
 **Recursive Non-Convergence in Generative Reasoning Systems**
 
 **Core Argument**: When LLMs recursively refine their own outputs without external grounding, informational change (ΔI) decays to a stable attractor. This demonstrates non-convergence toward truth, but convergence toward self-consistency.
@@ -366,8 +368,8 @@ Built with: Python 3.11, httpx, pandas, matplotlib, rich, tenacity
 
 ## 📞 Contact
 
-For questions about this implementation: [your contact]
-For questions about the papers: [paper authors]
+For questions about this implementation: **BentleyDeVilling@gmail.com**
+For questions about the papers: **BentleyDeVilling@gmail.com**
 
 ---
 
