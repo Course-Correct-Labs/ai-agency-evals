@@ -17,15 +17,20 @@ if not DATA.exists():
     # Synthetic fallback for demonstration (does not leak actual results)
     import numpy as np
     print("⚠️  CSV not found. Using synthetic demo data.")
-    iterations = np.arange(0, 10)
-    pooled = pd.DataFrame({
-        "iteration": iterations,
-        "delta_I": np.linspace(0.22, 0.07, 10) + np.random.normal(0, 0.005, 10),
-        "ngram_novelty": np.linspace(0.35, 0.12, 10) + np.random.normal(0, 0.005, 10),
+    demo_iters = np.arange(8)
+    df = pd.DataFrame({
+        "iteration": demo_iters,
+        "edit_change": np.exp(-demo_iters / 3) + np.random.normal(0, 0.05, len(demo_iters)),
+        "ngram_novelty": np.exp(-demo_iters / 2.5) + np.random.normal(0, 0.05, len(demo_iters))
     })
+    pooled = df.groupby('iteration', as_index=False).agg(
+        delta_I=('edit_change', 'mean'),
+        ngram_novelty=('ngram_novelty', 'mean')
+    )
 else:
     # Load actual cached results
     df = pd.read_csv(DATA)
+    print(f"✓ Loaded {len(df)} rows from {DATA.name}")
 
     # Expect columns: iteration, edit_change (ΔI), ngram_novelty (and optionally model, condition)
     # Aggregate across providers for the canonical pooled curve
