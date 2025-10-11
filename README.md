@@ -2,7 +2,7 @@
 
 **Reproducible evaluation suite for three LLM behavior research papers**
 
-![CI](https://img.shields.io/github/actions/workflow/status/BentleyRolling/ai-agency-evals/smoke-test.yml?branch=main)
+![CI](https://img.shields.io/github/actions/workflow/status/Course-Correct-Labs/ai-agency-evals/smoke-test.yml?branch=main)
 ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
@@ -35,7 +35,7 @@ This repository implements faithful, minimal-compute experiments that operationa
 
 ```bash
 # Clone repository
-git clone https://github.com/BentleyRolling/ai-agency-evals.git
+git clone https://github.com/Course-Correct-Labs/ai-agency-evals.git
 cd ai-agency-evals
 
 # Install dependencies
