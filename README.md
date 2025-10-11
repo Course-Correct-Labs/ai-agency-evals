@@ -8,7 +8,7 @@
 
 > **Scope**: This repository implements engineering evaluations derived from theoretical manuscripts (The Polite Liar, Delegated Introspection, Observer-Time). These are operationalizations of specific diagnostic claims about LLM behavior—not claims of general cognitive equivalence. Mock runs use simulated dialogues for reproducibility.
 
-> *Note: The manuscripts referenced here are under peer review. This repository contains implementation code and evaluation frameworks only.*
+> *Note: The manuscripts referenced here submitted for peer review. This repository contains implementation code and evaluation frameworks only.*
 
 This repository implements faithful, minimal-compute experiments that operationalize theoretical frameworks from three academic manuscripts on AI alignment, epistemic pathology, and temporal consciousness.
 
@@ -70,7 +70,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ## 📖 The Three Papers
 
-### The Polite Liar **(manuscript currently under review)**
+### The Polite Liar **(manuscript currently submitted for review)**
 **Epistemic Pathology in Language Models**
 
 **Core Argument**: RLHF-trained models exhibit "polite lying" - overconfident responses that prioritize user satisfaction over truth-tracking. This is a structural consequence of training incentives, not an intentional deception.
@@ -92,7 +92,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ---
 
-### Delegated Introspection **(manuscript currently under review)**
+### Delegated Introspection **(manuscript currently submitted for review)**
 **How Reflective Thought Migrates to the Machine**
 
 **Core Argument**: Users outsource reflective reasoning to LLMs through a three-stage mechanism:
@@ -115,7 +115,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ---
 
-### Observer-Time **(manuscript currently under review)**
+### Observer-Time **(manuscript currently submitted for review)**
 **Why Machines Cannot Constitute Temporal Consciousness**
 
 **Core Argument**: LLMs **register anchors** (timestamps, external markers) but cannot **constitute intervals** (lived stretches of time). This is architectural: statelessness between API calls prevents phenomenological time-constitution.
