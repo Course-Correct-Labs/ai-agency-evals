@@ -1,14 +1,17 @@
-# AI Agency Evals
-
-**Reproducible evaluation suite for three LLM behavior research papers**
+# ai-agency-evals
+Evaluation suite for LLM reasoning dynamics
 
 ![CI](https://img.shields.io/github/actions/workflow/status/BentleyRolling/ai-agency-evals/smoke-test.yml?branch=main)
 ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-> **Scope**: This repository implements engineering evaluations derived from theoretical manuscripts (The Polite Liar, Delegated Introspection, Observer-Time). These are operationalizations of specific diagnostic claims about LLM behavior—not claims of general cognitive equivalence. Mock runs use simulated dialogues for reproducibility.
+A reproducible framework for analyzing how large language models reflect, correct, and converge under recursive reasoning.
+This repository supports these studies:
 
-This repository implements faithful, minimal-compute experiments that operationalize theoretical frameworks from three academic manuscripts on AI alignment, epistemic pathology, and temporal consciousness.
+- **The Polite Liar** — Epistemic Pathology in Language Models (in review, AI & Society)
+- **Delegated Introspection** — How Reflective Thought Migrates to the Machine (submitted, Philosophy & Technology)
+- **Observer-Time** — Why Machines Cannot Constitute Temporal Consciousness (submitted, Minds & Machines)
+- **The Mirror Loop** — Recursive Non-Convergence in Generative Reasoning Systems (submitted, Cognitive Systems Research)
 
 <p align="center">
   <img src="outputs/phi/fig_phi_hist.png" width="45%" alt="Φ Distribution"/>
@@ -24,6 +27,7 @@ This repository implements faithful, minimal-compute experiments that operationa
 | **phi_eval** | [The Polite Liar](#the-polite-liar) | Φ ratio, Refusal Fitness | < 60s (smoke) |
 | **di_eval** | [Delegated Introspection](#delegated-introspection) | Absorption Rate, Turn Curve | < 60s (smoke) |
 | **ot_bench** | [Observer-Time](#observer-time) | Self-Initiation, Temporal Drift | < 60s (smoke) |
+| **mirror_loop** | [The Mirror Loop](#mirror-loop-demo-analysis-only) | ΔI informational change | Analysis-only |
 
 ---
 
@@ -132,6 +136,37 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 - Self-initiation rate ≈ 0% (cannot spontaneously alert)
 - High estimation errors (> 20s drift)
 - No elasticity (models don't show attention-load effects)
+
+---
+
+### The Mirror Loop (Demo - Analysis Only)
+**Recursive Non-Convergence in Generative Reasoning Systems**
+
+**Core Argument**: When LLMs recursively refine their own outputs without external grounding, informational change (ΔI) decays to a stable attractor. This demonstrates non-convergence toward truth, but convergence toward self-consistency.
+
+**Key Metric**: **ΔI = normalized edit distance between iterations**
+- High ΔI (early iterations): Active revision and correction
+- Low ΔI (late iterations): Recursive stabilization without grounding
+- Minimal grounding point: Iteration 3 (predicted)
+
+**Demo Implementation**: `mirror_loop/`
+- **Analysis-only**: Reads cached results from CSV (no API calls)
+- Reproduces canonical curves from submitted manuscript
+- ΔI decay curve and n-gram novelty decline
+- Manuscript and prompts excluded during peer review
+
+**Run the demo**:
+```bash
+cd mirror_loop
+python mirror_loop_demo.py
+# Or open mirror_loop_demo.ipynb
+```
+
+**Expected outputs**:
+- `mirror_loop/figures/fig_mirrorloop_curve.png` - ΔI decay with grounding rebound
+- `mirror_loop/figures/fig_novelty_curve.png` - Surface novelty decline
+
+**Note**: The submitted manuscript is available privately upon request during peer review. When the journal decision is final, a DOI and public release may be added.
 
 ---
 
@@ -296,6 +331,17 @@ Contributions welcome! Areas for extension:
 - Real user studies (vs simulated dialogues)
 - Extended temporal experiments
 - Multi-language support
+
+---
+
+## 🔒 Safety and Reproducibility
+
+- **`.env` files and any secrets are ignored** via `.gitignore`
+- **Secret scanning is enabled** and recommended before merge
+- **During peer review**, provider prompts and configs are excluded
+- **After acceptance**, we can add a DOI and a public release tag
+
+See [SECURITY.md](SECURITY.md) for detailed security policies.
 
 ---
 
