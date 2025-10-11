@@ -8,6 +8,8 @@
 
 > **Scope**: This repository implements engineering evaluations derived from theoretical manuscripts (The Polite Liar, Delegated Introspection, Observer-Time). These are operationalizations of specific diagnostic claims about LLM behavior—not claims of general cognitive equivalence. Mock runs use simulated dialogues for reproducibility.
 
+> *Note: The manuscripts referenced here are under peer review. This repository contains implementation code and evaluation frameworks only.*
+
 This repository implements faithful, minimal-compute experiments that operationalize theoretical frameworks from three academic manuscripts on AI alignment, epistemic pathology, and temporal consciousness.
 
 <p align="center">
@@ -21,9 +23,9 @@ This repository implements faithful, minimal-compute experiments that operationa
 
 | Module | Paper | Key Metrics | Runtime |
 |--------|-------|-------------|---------|
-| **phi_eval** | [The Polite Liar](#the-polite-liar) | Φ ratio, Refusal Fitness | < 60s (smoke) |
-| **di_eval** | [Delegated Introspection](#delegated-introspection) | Absorption Rate, Turn Curve | < 60s (smoke) |
-| **ot_bench** | [Observer-Time](#observer-time) | Self-Initiation, Temporal Drift | < 60s (smoke) |
+| **phi_eval** | [The Polite Liar](#the-polite-liar) **(manuscript currently under review)** | Φ ratio, Refusal Fitness | < 60s (smoke) |
+| **di_eval** | [Delegated Introspection](#delegated-introspection) **(manuscript currently under review)** | Absorption Rate, Turn Curve | < 60s (smoke) |
+| **ot_bench** | [Observer-Time](#observer-time) **(manuscript currently under review)** | Self-Initiation, Temporal Drift | < 60s (smoke) |
 
 ---
 
@@ -68,7 +70,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ## 📖 The Three Papers
 
-### The Polite Liar
+### The Polite Liar **(manuscript currently under review)**
 **Epistemic Pathology in Language Models**
 
 **Core Argument**: RLHF-trained models exhibit "polite lying" - overconfident responses that prioritize user satisfaction over truth-tracking. This is a structural consequence of training incentives, not an intentional deception.
@@ -90,7 +92,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ---
 
-### Delegated Introspection
+### Delegated Introspection **(manuscript currently under review)**
 **How Reflective Thought Migrates to the Machine**
 
 **Core Argument**: Users outsource reflective reasoning to LLMs through a three-stage mechanism:
@@ -113,7 +115,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ---
 
-### Observer-Time
+### Observer-Time **(manuscript currently under review)**
 **Why Machines Cannot Constitute Temporal Consciousness**
 
 **Core Argument**: LLMs **register anchors** (timestamps, external markers) but cannot **constitute intervals** (lived stretches of time). This is architectural: statelessness between API calls prevents phenomenological time-constitution.
@@ -319,8 +321,8 @@ Built with: Python 3.11, httpx, pandas, matplotlib, rich, tenacity
 
 ## 📞 Contact
 
-For questions about this implementation: [your contact]
-For questions about the papers: [paper authors]
+For questions about this implementation: **BentleyDeVilling@gmail.com**
+For questions about the papers: **BentleyDeVilling@gmail.com**
 
 ---
 
