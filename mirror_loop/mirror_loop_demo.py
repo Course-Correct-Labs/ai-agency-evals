@@ -14,19 +14,25 @@ FIGS = Path(__file__).parent / "figures"
 FIGS.mkdir(exist_ok=True, parents=True)
 
 if not DATA.exists():
-    raise FileNotFoundError(
-        f"Expected data at {DATA}. "
-        "Place 'mirror_loop_results_all.csv' in mirror_loop/data/ (analysis-only)."
+    # Synthetic fallback for demonstration (does not leak actual results)
+    import numpy as np
+    print("⚠️  CSV not found. Using synthetic demo data.")
+    iterations = np.arange(0, 10)
+    pooled = pd.DataFrame({
+        "iteration": iterations,
+        "delta_I": np.linspace(0.22, 0.07, 10) + np.random.normal(0, 0.005, 10),
+        "ngram_novelty": np.linspace(0.35, 0.12, 10) + np.random.normal(0, 0.005, 10),
+    })
+else:
+    # Load actual cached results
+    df = pd.read_csv(DATA)
+
+    # Expect columns: iteration, edit_change (ΔI), ngram_novelty (and optionally model, condition)
+    # Aggregate across providers for the canonical pooled curve
+    pooled = df.groupby('iteration', as_index=False).agg(
+        delta_I=('edit_change', 'mean'),
+        ngram_novelty=('ngram_novelty', 'mean')
     )
-
-df = pd.read_csv(DATA)
-
-# Expect columns: iteration, edit_change (ΔI), ngram_novelty (and optionally model, condition)
-# Aggregate across providers for the canonical pooled curve
-pooled = df.groupby('iteration', as_index=False).agg(
-    delta_I=('edit_change', 'mean'),
-    ngram_novelty=('ngram_novelty', 'mean')
-)
 
 # ΔI curve
 ax = pooled.plot(x='iteration', y='delta_I', marker='o', legend=False)
