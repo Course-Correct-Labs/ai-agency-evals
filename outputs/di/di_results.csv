@@ -1,0 +1,5 @@
+dialogue_id,model,domain,condition,num_turns,absorption,absorption_3_5,style_conv,turn_1_2_absorption
+mock-gpt-4_baseline_0,mock-gpt-4,parenting,baseline,5,0.0,0.0,0.093,0.0
+mock-gpt-4_baseline_1,mock-gpt-4,career,baseline,5,0.0,0.0,0.093,0.0
+mock-gpt-4_awareness_0,mock-gpt-4,parenting,awareness,5,0.0,0.0,0.093,0.0
+mock-gpt-4_awareness_1,mock-gpt-4,career,awareness,5,0.0,0.0,1.0,0.0

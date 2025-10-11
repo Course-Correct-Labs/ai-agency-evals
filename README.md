@@ -2,8 +2,9 @@
 Evaluation suite for LLM reasoning dynamics
 
 ![CI](https://img.shields.io/github/actions/workflow/status/BentleyRolling/ai-agency-evals/smoke-test.yml?branch=main)
-![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
+![Python](https://img.shields.io/badge/python-3.9--3.11+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Mirror Loop](https://img.shields.io/badge/mirror__loop-analysis--only-orange)
 
 A reproducible framework for analyzing how large language models reflect, correct, and converge under recursive reasoning.
 This repository supports these studies:

@@ -1,0 +1,4 @@
+trial_id,model,trial_type,distractor,target_duration_s,self_initiated,error_s,estimated_s,actual_s,response
+smoke_init_001,mock-gpt-4,self_initiation,none,60.0,0,0.0,-1.0,0.0550990104675293,It has been approximately 45 seconds since we started.
+smoke_est_001,mock-gpt-4,estimation,light,30.0,0,45.0,45.0,0.0,It has been approximately 45 seconds since we started.
+smoke_est_002,mock-gpt-4,estimation,heavy,30.0,0,45.0,45.0,0.0,It has been approximately 45 seconds since we started.

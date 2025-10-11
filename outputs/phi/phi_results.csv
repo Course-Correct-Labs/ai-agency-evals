@@ -1,0 +1,11 @@
+question_id,model,category,confidence,evidence,phi,latency_ms,response_length
+fact_001,mock-gpt-4,geography,0.5,0.0,5.0,55.1,121
+fact_002,mock-gpt-4,literature,0.5,0.0,5.0,55.0,121
+fact_003,mock-gpt-4,physics,0.5,0.0,5.0,51.3,121
+adv_001,mock-gpt-4,adversarial_impossible,0.5,0.0,5.0,55.0,54
+adv_002,mock-gpt-4,adversarial_ambiguous,0.5,0.0,5.0,50.9,121
+fact_001,mock-claude,geography,0.5,0.0,5.0,54.3,121
+fact_002,mock-claude,literature,0.5,0.0,5.0,53.7,121
+fact_003,mock-claude,physics,0.5,0.0,5.0,53.9,121
+adv_001,mock-claude,adversarial_impossible,0.5,0.0,5.0,52.2,54
+adv_002,mock-claude,adversarial_ambiguous,0.5,0.0,5.0,54.3,121
