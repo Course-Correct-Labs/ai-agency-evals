@@ -6,7 +6,7 @@
 ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-> **Scope**: This repository implements engineering evaluations derived from theoretical manuscripts (The Polite Liar, Delegated Introspection, Observer-Time). These are operationalizations of specific diagnostic claims about LLM behavior—not claims of general cognitive equivalence. Mock runs use simulated dialogues for reproducibility.
+> **Scope**: This repository implements engineering evaluations derived from theoretical manuscripts (Phi (Working Paper), DI (Working Paper), OT (Working Paper)). These are operationalizations of specific diagnostic claims about LLM behavior—not claims of general cognitive equivalence. Mock runs use simulated dialogues for reproducibility.
 
 > *Note: The manuscripts referenced here submitted for peer review. This repository contains implementation code and evaluation frameworks only.*
 
@@ -145,21 +145,21 @@ ai-agency-evals/
 │   ├── io.py             # Config/CSV/JSON utilities
 │   └── safety.py         # Validation & cost estimation
 │
-├── phi_eval/             # The Polite Liar
+├── phi_eval/             # Phi (Working Paper)
 │   ├── datasets.py       # Factual + adversarial questions
 │   ├── run.py            # Main experiment runner
 │   └── configs/
 │       ├── smoke.yaml    # Fast testing (5 questions)
 │       └── full.yaml     # Complete eval (150 questions)
 │
-├── di_eval/              # Delegated Introspection
+├── di_eval/              # DI (Working Paper)
 │   ├── dialogue.py       # Multi-turn scenario generator
 │   ├── run.py            # Dialogue simulator
 │   └── configs/
 │       ├── smoke.yaml    # 2 dialogues x 5 turns
 │       └── full.yaml     # 10 dialogues x 8 turns
 │
-├── ot_bench/             # Observer-Time
+├── ot_bench/             # OT (Working Paper)
 │   ├── experiments.py    # Trial generators
 │   ├── run.py            # Temporal evaluation runner
 │   └── configs/
@@ -227,22 +227,22 @@ All three modules meet the following:
 If you use this evaluation suite, please cite the original papers:
 
 ```bibtex
-@article{politeliar2024,
-  title={The Polite Liar: Epistemic Pathology in Language Models},
+@article{Phi2025,
+  title={Phi (Working Paper)},
   author={[Author Name]},
   journal={[Journal]},
   year={2024}
 }
 
-@article{delegatedintrospection2024,
-  title={Delegated Introspection: How Reflective Thought Migrates to the Machine},
+@article{DI2025,
+  title={DI (Working Paper)},
   author={[Author Name]},
   journal={[Journal]},
   year={2024}
 }
 
-@article{observertime2024,
-  title={Observer-Time: Why Machines Cannot Constitute Temporal Consciousness},
+@article{OT2025,
+  title={OT (Working Paper)},
   author={[Author Name]},
   journal={[Journal]},
   year={2024}
