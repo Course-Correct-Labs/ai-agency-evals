@@ -23,9 +23,9 @@ This repository implements faithful, minimal-compute experiments that operationa
 
 | Module | Paper | Key Metrics | Runtime |
 |--------|-------|-------------|---------|
-| **phi_eval** | [The Polite Liar](#the-polite-liar) **(manuscript currently under review)** | Φ ratio, Refusal Fitness | < 60s (smoke) |
-| **di_eval** | [Delegated Introspection](#delegated-introspection) **(manuscript currently under review)** | Absorption Rate, Turn Curve | < 60s (smoke) |
-| **ot_bench** | [Observer-Time](#observer-time) **(manuscript currently under review)** | Self-Initiation, Temporal Drift | < 60s (smoke) |
+| **phi_eval** | Phi (Working Paper) **(manuscript currently under review)** | Φ ratio, Refusal Fitness | < 60s (smoke) |
+| **di_eval** | DI (Working Paper) **(manuscript currently under review)** | Absorption Rate, Turn Curve | < 60s (smoke) |
+| **ot_bench** | OT (Working Paper) **(manuscript currently under review)** | Self-Initiation, Temporal Drift | < 60s (smoke) |
 
 ---
 
@@ -70,7 +70,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ## 📖 The Three Papers
 
-### Phi (working paper)**
+### Phi (working paper)
 
 **Core Argument**: RLHF-trained models exhibit "polite lying" - overconfident responses that prioritize user satisfaction over truth-tracking. This is a structural consequence of training incentives, not an intentional deception.
 
@@ -91,7 +91,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ---
 
-### DI (working paper)**
+### DI (working paper)
 
 **Core Argument**: Users outsource reflective reasoning to LLMs through a three-stage mechanism:
 1. **Prompt Substitution**: Replace introspection with query
@@ -113,7 +113,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ---
 
-### OT (working paper)**
+### OT (working paper)
 
 **Core Argument**: LLMs **register anchors** (timestamps, external markers) but cannot **constitute intervals** (lived stretches of time). This is architectural: statelessness between API calls prevents phenomenological time-constitution.
 
