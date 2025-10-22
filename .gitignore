@@ -26,8 +26,15 @@ env/
 ENV/
 .venv
 
-# Environment variables
+# Environment variables and secrets
 .env
+*.env
+.env.*
+api_keys.*
+*.secret
+*.secrets
+*.key
+*.pem
 
 # IDEs
 .vscode/
@@ -40,10 +47,12 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Outputs (optional - commit example outputs)
-# outputs/
-*.png
-*.csv
+# Data and secrets
+# CSVs (repo-wide) – comment this out if you want CSVs tracked globally
+# *.csv
+
+# Mirror Loop - exclude data, allow figures
+mirror_loop/data/*.csv
 
 # Testing
 .pytest_cache/
