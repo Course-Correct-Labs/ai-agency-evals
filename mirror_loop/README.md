@@ -34,3 +34,24 @@ The demo aggregates across providers/models to produce pooled curves.
 
 - The submitted manuscript is not included in this repo. For review it is available privately: "Private Manuscript (on request)".
 - When the journal decision is final, we may add a DOI and link a public release tag.
+
+
+## Quick Start
+
+Run in Colab (no setup required):
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Course-Correct-Labs/ai-agency-evals/blob/main/mirror_loop/mirror_loop_demo.ipynb)
+
+or locally:
+```bash
+cd mirror_loop
+python3 mirror_loop_demo.py
+```
+
+If `mirror_loop_results_all.csv` is missing, the demo automatically uses synthetic data for a working example.
+
+## Citation and Release
+
+Preprint: arXiv:TO-BE-ADDED  
+Release: v0.2.0-mirror-loop
+
