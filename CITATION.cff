@@ -5,7 +5,8 @@ type: software
 authors:
   - family-names: DeVilling
     given-names: Bentley
-repository-code: https://github.com/BentleyRolling/ai-agency-evals
+    affiliation: Course Correct Labs
+repository-code: https://github.com/Course-Correct-Labs/ai-agency-evals
 license: MIT
 version: 0.1.0
 date-released: 2025-10-09
