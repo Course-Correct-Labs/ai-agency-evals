@@ -1,3 +1,23 @@
+# AI Agency Evals · Course Correct Labs
+
+Open, reproducible evaluations of language model behavior and reasoning reliability.
+
+**Quick links**
+- **Mirror Loop demo (Colab):**  
+  https://colab.research.google.com/github/Course-Correct-Labs/ai-agency-evals/blob/main/mirror_loop/mirror_loop_demo.ipynb
+- **Mirror Loop module:** `mirror_loop/`
+- **How to run locally:** `cd mirror_loop && python3 mirror_loop_demo.py`
+
+## Studies in this repository
+
+| Study | What it is | Jump |
+|---|---|---|
+| **Mirror Loop** *(new)* | Analysis-only demo that reproduces the informational change decay curve and minimal grounding rebound from the paper. No keys. CSV fallback. | [Go to Mirror Loop section](#mirror-loop-analysis-only-demo) |
+| **Polite Liar** | Measures the gap between assertoric force and evidence support across providers and prompt families. | [Go to Polite Liar section](#polite-liar-study) |
+| **Delegated Introspection (DI)** | Tests whether simple delegation patterns improve self review and error discovery. | [Go to Delegated Introspection section](#delegated-introspection-di) |
+| **Observer-Time (OT)** | Examines stability of reasoning under time spaced re-prompts and memory reconstruction. | [Go to Observer-Time section](#observer-time-ot) |
+
+---
 # AI Agency Evals
 
 **Reproducible evaluation suite for three LLM behavior research papers**
