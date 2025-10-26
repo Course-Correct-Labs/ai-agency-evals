@@ -1,23 +1,3 @@
-# AI Agency Evals · Course Correct Labs
-
-Open, reproducible evaluations of language model behavior and reasoning reliability.
-
-**Quick links**
-- **Mirror Loop demo (Colab):**  
-  https://colab.research.google.com/github/Course-Correct-Labs/ai-agency-evals/blob/main/mirror_loop/mirror_loop_demo.ipynb
-- **Mirror Loop module:** `mirror_loop/`
-- **How to run locally:** `cd mirror_loop && python3 mirror_loop_demo.py`
-
-## Studies in this repository
-
-| Study | What it is | Jump |
-|---|---|---|
-| **Mirror Loop** *(new)* | Analysis-only demo that reproduces the informational change decay curve and minimal grounding rebound from the paper. No keys. CSV fallback. | [Go to Mirror Loop section](#mirror-loop-analysis-only-demo) |
-| **Polite Liar** | Measures the gap between assertoric force and evidence support across providers and prompt families. | [Go to Polite Liar section](#polite-liar-study) |
-| **Delegated Introspection (DI)** | Tests whether simple delegation patterns improve self review and error discovery. | [Go to Delegated Introspection section](#delegated-introspection-di) |
-| **Observer-Time (OT)** | Examines stability of reasoning under time spaced re-prompts and memory reconstruction. | [Go to Observer-Time section](#observer-time-ot) |
-
----
 # AI Agency Evals
 
 **Reproducible evaluation suite for three LLM behavior research papers**
@@ -43,9 +23,9 @@ This repository implements faithful, minimal-compute experiments that operationa
 
 | Module | Paper | Key Metrics | Runtime |
 |--------|-------|-------------|---------|
-| **phi_eval** | [The Polite Liar](#the-polite-liar) **(manuscript currently under review)** | Φ ratio, Refusal Fitness | < 60s (smoke) |
-| **di_eval** | [Delegated Introspection](#delegated-introspection) **(manuscript currently under review)** | Absorption Rate, Turn Curve | < 60s (smoke) |
-| **ot_bench** | [Observer-Time](#observer-time) **(manuscript currently under review)** | Self-Initiation, Temporal Drift | < 60s (smoke) |
+| **phi_eval** | [Phi](#the-polite-liar) **(manuscript currently under review)** | Φ ratio, Refusal Fitness | < 60s (smoke) |
+| **di_eval** | [DI](#delegated-introspection) **(manuscript currently under review)** | Absorption Rate, Turn Curve | < 60s (smoke) |
+| **ot_bench** | [OT](#observer-time) **(manuscript currently under review)** | Self-Initiation, Temporal Drift | < 60s (smoke) |
 
 ---
 
@@ -90,7 +70,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ## 📖 The Three Papers
 
-### The Polite Liar **(manuscript currently submitted for review)**
+### Phi **(manuscript currently submitted for review)**
 **Epistemic Pathology in Language Models**
 
 **Core Argument**: RLHF-trained models exhibit "polite lying" - overconfident responses that prioritize user satisfaction over truth-tracking. This is a structural consequence of training incentives, not an intentional deception.
@@ -135,7 +115,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ---
 
-### Observer-Time **(manuscript currently submitted for review)**
+### OT **(manuscript currently submitted for review)**
 **Why Machines Cannot Constitute Temporal Consciousness**
 
 **Core Argument**: LLMs **register anchors** (timestamps, external markers) but cannot **constitute intervals** (lived stretches of time). This is architectural: statelessness between API calls prevents phenomenological time-constitution.
@@ -338,36 +318,15 @@ This evaluation suite operationalizes theoretical work on:
 Built with: Python 3.11, httpx, pandas, matplotlib, rich, tenacity
 
 ---
+## License
+**Code:** MIT License
 
-## 📞 Contact
+**Data and text:** CC BY 4.0
 
-For questions about this implementation: **BentleyDeVilling@gmail.com**
-For questions about the papers: **BentleyDeVilling@gmail.com**
+See LICENSE.
 
----
-
-© 2025 Bentley DeVilling — MIT License
-
----
-
-## Mirror Loop (analysis-only demo)
-
-Reproduces the informational-change decay curve and the minimal-grounding rebound from the study.  
-This module was kept private during journal review and is now public.
-
-- Run locally:  
-  ```bash
-  cd mirror_loop && python3 mirror_loop_demo.py
-  ```
-
-- Open in Colab:  
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Course-Correct-Labs/ai-agency-evals/blob/main/mirror_loop/mirror_loop_demo.ipynb)
-
-- Data: expects `mirror_loop/data/mirror_loop_results_all.csv` (gitignored).  
-  Falls back to synthetic demo if missing.
-
-### Safety and Reproducibility
-
-- No provider keys or prompts in the repo
-- Secret scanning enabled
-- Deterministic figures regenerated from cached metrics
+## Maintained by
+**Bentley DeVilling** — Course Correct Labs
+Boulder Creek, CA
+coursecorrectlabs.com
+Bentley@CourseCorrectLabs.com
