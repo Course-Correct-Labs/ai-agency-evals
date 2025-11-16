@@ -70,7 +70,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ## 📖 The Three Papers
 
-### Phi **(manuscript currently submitted for review)**
+### The Polite Liar **(manuscript currently under review)**
 **Epistemic Pathology in Language Models**
 
 **Core Argument**: RLHF-trained models exhibit "polite lying" - overconfident responses that prioritize user satisfaction over truth-tracking. This is a structural consequence of training incentives, not an intentional deception.
@@ -92,7 +92,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ---
 
-### Delegated Introspection **(manuscript currently submitted for review)**
+### Delegated Introspection **(manuscript currently under review)**
 **How Reflective Thought Migrates to the Machine**
 
 **Core Argument**: Users outsource reflective reasoning to LLMs through a three-stage mechanism:
@@ -115,7 +115,7 @@ python -m ot_bench.run --config ot_bench/configs/full.yaml
 
 ---
 
-### OT **(manuscript currently submitted for review)**
+### Observer Time **(manuscript currently with Editor)**
 **Why Machines Cannot Constitute Temporal Consciousness**
 
 **Core Argument**: LLMs **register anchors** (timestamps, external markers) but cannot **constitute intervals** (lived stretches of time). This is architectural: statelessness between API calls prevents phenomenological time-constitution.
